@@ -10,11 +10,11 @@ function z = sth_model(lat, doy, pvu)
 % 
 % For details see:
 % Global empirical models for tropopause height determination
-% Pedro Mateus, Virgílio B. Mendes, and Carlos A.L. Pires
-% Instituto Dom Luiz, Faculdade de Ciências, Universidade de Lisboa, Lisbon, Portugal
+% Pedro Mateus, VirgÃ­lio B. Mendes, and Carlos A.L. Pires
+% Instituto Dom Luiz, Faculdade de CiÃªncias, Universidade de Lisboa, Lisbon, Portugal
 % pjmateus@fc.ul.pt; vmendes@fc.ul.pt; clpires@fc.ul.pt
 % Submitted to Atmospheric Research Journal
-%
+
 if nargin < 3
     pvu = 3.5;
     disp('Fixing the PVU in 3.5!')
