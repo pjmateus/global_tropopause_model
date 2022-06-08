@@ -22,8 +22,8 @@ def bth_model(lat, doy, pvu=3.5):
     pjmateus@fc.ul.pt; vmendes@fc.ul.pt; clpires@fc.ul.pt
     Submitted to Atmospheric Research Journal
     '''   
-    from numpy import shape, linspace, array, polyfit, polyval
-    from scipy.interpolate import RegularGridInterpolator
+    #from numpy import shape, linspace, array, polyfit, polyval
+    #from scipy.interpolate import RegularGridInterpolator
     
     if shape(lat) != shape(doy):
         print('The lat and doy vector must be the same size!!!')
