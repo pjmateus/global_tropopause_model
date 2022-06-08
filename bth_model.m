@@ -1,11 +1,11 @@
-function z = get_tropopause_height(lat, doy, pvu)
+function z = bth_model(lat, doy, pvu)
 % Lookup-table-model for tropopause determination
 % INPUT
 %       lat : latitude, in degrees [-90..90]  (can be an array)
 %       doy : day-of-year          [1..366]   (can be an array, same size as lat)
 %       pvu : PVU value            [1.5..3.5] 
 % OUTPUT
-%       z   : tropopause height, in meters
+%       z   : tropopause height, in km
 %
 % For details see:
 % Global empirical models for tropopause height determination
