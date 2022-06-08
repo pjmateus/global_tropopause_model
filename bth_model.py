@@ -117,7 +117,7 @@ def bth_model(lat, doy, pvu=3.5):
     F = RegularGridInterpolator((bands, doys), Tpvu15.T, method='linear')
     z15 = F((lat, doy))
            
-    z = [] 
+    z = []
     for k in range(0, len(lat)): 
         p = polyfit([1.5, 2.0, 2.5, 3.0, 3.5], [z15[k],z20[k],z25[k],z30[k],z35[k]], 1)
         z.append(polyval(p, pvu))
