@@ -56,7 +56,7 @@ def sth_model(lat, doy, pvu=3.5):
         d = (1+exp(-(lat[i]-a2)/a3))**a4
         arg = 2*pi/365.25 * (doy[i]-28)
         z_ = a0 + a1/d + a5 * cos(arg)
-            
+        
         if pvu == 3.5:
             z.append(z_[-1])
         else:
