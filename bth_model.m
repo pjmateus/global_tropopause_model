@@ -116,5 +116,4 @@ for k = 1 : length(lat)
     p = polyfit((1.5:0.5:3.5), [z15(k),z20(k),z25(k),z30(k),z35(k)], 1);
     z(k) = polyval(p, pvu);
 end
-
 return
