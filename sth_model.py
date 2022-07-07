@@ -22,7 +22,7 @@ def sth_model(lat, doy, pvu=3.5):
     pjmateus@fc.ul.pt; vmendes@fc.ul.pt; clpires@fc.ul.pt
     Submitted to Atmospheric Research Journal
     '''
-    #from numpy import shape, array, polyfit, polyval, exp, pi, cos    
+    from numpy import shape, array, polyfit, polyval, exp, pi, cos    
     
     if len( shape(lat) ) == 0:
         lat = [lat]
