@@ -22,8 +22,9 @@ def bth_model(lat, doy, pvu=3.5):
     pjmateus@fc.ul.pt; vmendes@fc.ul.pt; clpires@fc.ul.pt
     Submitted to Atmospheric Research Journal
     '''   
-    #from numpy import shape, linspace, array, polyfit, polyval
-    #from scipy.interpolate import RegularGridInterpolator
+    from numpy import shape, linspace, array, polyfit, polyval
+    from scipy.interpolate import RegularGridInterpolator
+    
     if len( shape(lat) ) == 0:
         lat = [lat]
         doy = [doy]    
@@ -105,7 +106,11 @@ def bth_model(lat, doy, pvu=3.5):
     [7.889,	7.768,	7.643,	8.007,	9.061,	9.913,	10.530,	11.700,	14.122,	15.690,	16.229,	16.257,	16.158,	15.612,	14.825,	13.821,	12.388,	11.116,	9.805,	8.626,	8.126,	7.700,	7.219],
     [7.695,	7.656,	7.534,	7.926,	9.278,	10.353,	11.043,	12.096,	14.116,	15.648,	16.323,	16.401,	16.326,	15.849,	14.787,	13.315,	11.552,	10.469,	9.293,	8.213,	7.756,	7.476,	7.153],
     [7.400,	7.571,	7.577,	8.001,	9.528,	10.902,	11.604,	12.822,	14.490,	15.596,	16.290,	16.418,	16.386,	16.097,	14.960,	12.983,	11.097,	9.854,	8.845,	8.037,	7.636,	7.355,	7.228]])
-
+    
+    if doy < doys[0]:
+        doy = doys[0]
+    elif doy > doys[-1]:
+        doy = doys[-1]
     F = RegularGridInterpolator((bands, doys), Tpvu35.T, method='linear')
     z35 = F((lat, doy))
     F = RegularGridInterpolator((bands, doys), Tpvu30.T, method='linear')
