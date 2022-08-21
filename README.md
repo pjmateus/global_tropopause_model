@@ -23,9 +23,9 @@ Python code to call the **lookup-table-model** (BTH) function
 ```Python
 from numpy import shape, linspace, array, polyfit, polyval
 from scipy.interpolate import RegularGridInterpolator
-lat = 38.5519;  % latitude, in degrees [-90..90]  (can be an array)
-doy = 150;      % day-of-year          [1..366]   (can be an array, same size as lat)
-pvu = 3.5;      % PVU value            [1.5..3.5] (optional, not an array)
+lat = 38.5519;  # latitude, in degrees [-90..90]  (can be an array)
+doy = 150;      # day-of-year          [1..366]   (can be an array, same size as lat)
+pvu = 3.5;      # PVU value            [1.5..3.5] (optional, not an array)
 z = bth_model(lat, doy, pvu)
 ```
 
