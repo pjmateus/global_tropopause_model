@@ -111,6 +111,10 @@ def bth_model(lat, doy, pvu=3.5):
         doy = doys[0]
     elif doy > doys[-1]:
         doy = doys[-1]
+    if lat < bands[0]:
+        lat = bands[0]
+    elif lat > bands[-1]:
+        lat = bands[-1] 
     F = RegularGridInterpolator((bands, doys), Tpvu35.T, method='linear')
     z35 = F((lat, doy))
     F = RegularGridInterpolator((bands, doys), Tpvu30.T, method='linear')
