@@ -33,3 +33,5 @@ z = sth_model(lat, doy, pvu)
 ```
 
 **If you have any questions do not hesitate to contact me by email pjmateus@fc.ul.pt**
+
+For details see: Mateus, P.; Mendes, V.B.; Pires, C.A.L. Global Empirical Models for Tropopause Height Determination. Remote Sens. 2022, 14, 4303. https://doi.org/10.3390/rs14174303
